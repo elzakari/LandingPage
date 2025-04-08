@@ -51,25 +51,25 @@ function App() {
       name: "White Sands Property",
       units: 11,
       capacity: "Up to 44 guests",
-      image: "/images/White_Sands_property/main.jpg",
+      image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Main.jpg`,
       features: ["Rooftop Pool", "Ocean Views", "Entertainment Area", "Full Kitchen"],
       description: "Luxurious beachfront units with stunning ocean views, perfect for large group retreats and corporate events.",
       rating: 4.9,
       price: 299,
-      location: "Miami, FL",
+      location: "Negril, Jamaica",
       airbnbLink: "https://airbnb.com/property1",
       gallery: [
-        "/images/White_Sands_property/Double_Unit_Bathroom.jpg",
-        "/images/White_Sands_property/Double_Unit_Bedroom.jpg",
-        "/images/White_Sands_property/Double_Unit_Kitchen.jpg",
-        "/images/White_Sands_property/Double_Unit_Livingroom.jpg",
-        "/images/White_Sands_property/Gym.jpg",
-        "/images/White_Sands_property/Main.jpg",
-        "/images/White_Sands_property/Pool.jpg",
-        "/images/White_Sands_property/Single_Unit_Bathroom.jpg",
-        "/images/White_Sands_property/Single_Unit_Bedroom.jpg",
-        "/images/White_Sands_property/Single_Unit_Kitchen.jpg",
-        "/images/White_Sands_property/Single_Unit_Livingroom.jpg"
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bathroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bedroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Kitchen.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Livingroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Gym.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Main.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Pool.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Bathroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Bedroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Kitchen.jpg`,
+        `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Livingroom.jpg`
       ],
       unitTypes: [
         {
@@ -79,7 +79,7 @@ function App() {
           bathrooms: 2,
           price: 299,
           features: ["Ocean View", "Full Kitchen", "Living Area", "Private Balcony"],
-          image: "/images/White_Sands_property/double_unit.jpg"
+          image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Livingroom.jpg`
         },
         {
           name: "Single Unit",
@@ -88,7 +88,7 @@ function App() {
           bathrooms: 1,
           price: 199,
           features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View"],
-          image: "/images/White_Sands_property/single_unit.jpg"
+          image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Livingroom.jpg`
         }
       ]
     },
@@ -97,35 +97,35 @@ function App() {
       name: "Russell Heights Property",
       units: 25,
       capacity: "Up to 100 guests",
-      image: "/images/Russell_Heights_property/main.jpg",
+      image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Outside_Of_The_Building.jpg`,
+      // Make sure this matches the exact case of the file in your system
       features: ["Infinity Pool", "Panoramic Views", "Event Space", "Private Balconies"],
       description: "Spacious hillside retreat with panoramic city views, featuring modern amenities and versatile event spaces.",
       rating: 4.8,
       price: 299,
-      location: "Orlando, FL",
+      location: "Kingstown, Jamaica",
       airbnbLink: "https://airbnb.com/property2",
       gallery: [
-        "/images/Russell_Heights_property/Balcony view 1.jpg",
-        "/images/Russell_Heights_property/Bathroom-1 view 3.jpg",
-        "/images/Russell_Heights_property/Bedroom-2 view 2.jpg",
-        "/images/Russell_Heights_property/Dining room view 2.jpg",
-        "/images/Russell_Heights_property/Half bath.jpg",
-        "/images/Russell_Heights_property/Kitchen view 4.jpg",
-        "/images/Russell_Heights_property/Living room view 7.png",
-        "/images/Russell_Heights_property/main.jpg",
-        "/images/Russell_Heights_property/Outside of the building.jpg",
-        "/images/Russell_Heights_property/Pool side view 10.jpg",
-        "/images/Russell_Heights_property/Pool side view 4.jpg",
-        "/images/Russell_Heights_property/Roof top view 2.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Balcony.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Bathroom.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Bedroom.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Bedroom2.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Diningroom.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Kitchen.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Laundry.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Livingroom.jpg",
-        "/images/Russell_Heights_property/Russell_Heights_Property_Livingroom2.jpg"
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Balcony_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bathroom_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bedroom_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Dining_Room_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Half_Bath.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Kitchen_View4.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Living_Room_View.png`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Outside_Of_The_Building.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Pool_Side_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Pool_Side_View2.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Roof_Top_View.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Balcony.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bathroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bedroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bedroom2.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Diningroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Kitchen.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Laundry.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Livingroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Livingroom2.jpg`,
       ],
       unitTypes: [
         {
@@ -135,7 +135,7 @@ function App() {
           bathrooms: 2,
           price: 299,
           features: ["City View", "Full Kitchen", "Living Area", "Private Balcony"],
-          image: "/images/Russell_Heights_property/double_unit.jpg"
+          image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Living_Room_View.png`
         },
         {
           name: "Single Unit",
@@ -144,7 +144,7 @@ function App() {
           bathrooms: 1,
           price: 199,
           features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View"],
-          image: "/images/Russell_Heights_property/single_unit.jpg"
+          image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bedroom-2 view 2.jpg`
         }
       ]
     }
@@ -160,7 +160,7 @@ function App() {
           <div className="container mx-auto px-4 flex justify-between items-center">
             <div className="flex items-center">
               <img 
-                src="/images/Reign Hosting Services Logos/Contentless_Logo.png" 
+                src={`${process.env.PUBLIC_URL}/images/Reign Hosting Services Logos/Contentless_Logo.png`} 
                 alt="Reign Hosting Services Logo" 
                 className={`h-10 mr-3 transition-all duration-300 ${isScrolled ? 'opacity-100' : 'opacity-90'}`}
               />
@@ -255,7 +255,7 @@ function App() {
         {/* Hero Section with parallax effect */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="parallax-bg" style={{backgroundImage: "url('/images/hero-bg.jpg')"}}></div>
+            <div className="parallax-bg" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/images/hero-bg.jpg')`}}></div>
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">

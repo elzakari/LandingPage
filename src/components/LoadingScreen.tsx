@@ -32,7 +32,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadComplete }) => {
     <div className="fixed inset-0 bg-gradient-to-b from-blue-50 to-white z-50 flex flex-col items-center justify-center">
       <div className="mb-10 flex flex-col items-center">
         <img 
-          src="/images/Reign Hosting Services Logos/Main_Logo.png" 
+          src={`${process.env.PUBLIC_URL}/images/Reign Hosting Services Logos/Main_Logo.png`} 
           alt="Reign Hosting Services Logo" 
           className="w-64 h-auto mb-6 rounded-lg shadow-md"
         />

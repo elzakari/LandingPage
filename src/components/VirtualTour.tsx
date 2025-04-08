@@ -32,14 +32,14 @@ const VirtualTour: React.FC<VirtualTourProps> = ({ tourUrl }) => {
       name: "White Sands Property",
       url: "https://www.youtube.com/watch?v=B4o8PvcqHC4",
       description: "Explore our stunning White Sands Property with ocean views and premium amenities. This virtual tour showcases the spacious living areas, modern kitchen, and breathtaking ocean views from the balcony.",
-      thumbnail: "/images/White_Sands_property/main.jpg"
+      thumbnail: `${process.env.PUBLIC_URL}/images/White_Sands_property/main.jpg`
     },
     {
       id: 2,
       name: "Russell Heights Property",
       url: "https://www.youtube.com/watch?v=iIqVn1uDGuk",
       description: "Take a virtual walk through our luxurious Russell Heights Property with panoramic city views. Discover the infinity pool, entertainment areas, and elegantly designed interiors perfect for group stays.",
-      thumbnail: "/images/Russell_Heights_property/main.jpg"
+      thumbnail: `${process.env.PUBLIC_URL}/images/Russell_Heights_property/main.jpg`
     }
   ];
 

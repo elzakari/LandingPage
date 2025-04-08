@@ -13,230 +13,222 @@ const Gallery: React.FC = () => {
     // White Sands Property
     { 
       id: 1,
-      src: "/images/White_Sands_property/Double_Unit_Bathroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bathroom.jpg`,
       alt: "Bathroom",
       category: "Bathroom",
       property: "WhiteSands"
     },
     { 
       id: 2,
-      src: "/images/White_Sands_property/Double_Unit_Bedroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bedroom.jpg`,
       alt: "Bedroom",
       category: "Bedroom",
       property: "WhiteSands"
     },
     { 
       id: 3,
-      src: "/images/White_Sands_property/Double_Unit_Kitchen.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Kitchen.jpg`,
       alt: "Kitchen",
       category: "Kitchen",
       property: "WhiteSands"
     },
     { 
       id: 4,
-      src: "/images/White_Sands_property/Double_Unit_Livingroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Livingroom.jpg`,
       alt: "Living Room",
       category: "Living Room",
       property: "WhiteSands"
     },
     { 
       id: 5,
-      src: "/images/White_Sands_property/Gym.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Gym.jpg`,
       alt: "Gym",
       category: "Amenities",
       property: "WhiteSands"
     },
     { 
       id: 6,
-      src: "/images/White_Sands_property/Main.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Main.jpg`,
       alt: "Main",
       category: "Property",
       property: "WhiteSands"
     },
     { 
       id: 7,
-      src: "/images/White_Sands_property/Pool.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Pool.jpg`,
       alt: "Pool",
       category: "Amenities",
       property: "WhiteSands"
     },
     { 
       id: 8,
-      src: "/images/White_Sands_property/Single_Unit_Bathroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Bathroom.jpg`,
       alt: "Bathroom",
       category: "Bathroom",
       property: "WhiteSands"
     },
     { 
       id: 9,
-      src: "/images/White_Sands_property/Single_Unit_Bedroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Bedroom.jpg`,
       alt: "Bedroom",
       category: "Bedroom",
       property: "WhiteSands"
     },
     { 
       id: 10,
-      src: "/images/White_Sands_property/Single_Unit_Kitchen.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Kitchen.jpg`,
       alt: "Kitchen",
       category: "Kitchen",
       property: "WhiteSands"
     },
     { 
       id: 11,
-      src: "/images/White_Sands_property/Single_Unit_Livingroom.jpg",
+      src: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Livingroom.jpg`,
       alt: "Living Room",
       category: "Living Room",
       property: "WhiteSands"
     },
     
-    // Russell Heights Property
     { 
-      id: 2,
-      src: "/images/Russell_heights_property/Balcony view 1.jpg",
+      id: 12,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Balcony_View.jpg`,
       alt: "Balcony View",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 3,
-      src: "/images/Russell_heights_property/Bathroom-1 view 3.jpg",
+      id: 13,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bathroom_View.jpg`,
       alt: "Bathroom",
       category: "Bathroom",
       property: "RussellHeights"
     },
     { 
-      id: 4,
-      src: "/images/Russell_heights_property/Bedroom-2 view 2.jpg",
+      id: 14,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bedroom_View.jpg`,
       alt: "Bedroom",
       category: "Bedroom",
       property: "RussellHeights"
     },
     { 
-      id: 5,
-      src: "/images/Russell_heights_property/Dining room view 2.jpg",
+      id: 15,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Dining_Room_View.jpg`,
       alt: "Dining Room",
       category: "Dining Room",
       property: "RussellHeights"
     },
     { 
-      id: 6,
-      src: "/images/Russell_heights_property/Half bath.jpg",
+      id: 16,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Half_Bath.jpg`,
       alt: "Half Bath",
       category: "Bathroom",
       property: "RussellHeights"
     },
     { 
-      id: 7,
-      src: "/images/Russell_heights_property/Kitchen view 4.jpg",
+      id: 17,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Kitchen_View4.jpg`,
       alt: "Kitchen",
       category: "Kitchen",
       property: "RussellHeights"
     },
     { 
-      id: 8,
-      src: "/images/Russell_heights_property/Living room view 7.png",
+      id: 18,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Living_Room_View.png`,
       alt: "Living Room",
       category: "Living Room",
       property: "RussellHeights"
     },
     { 
-      id: 9,
-      src: "/images/Russell_heights_property/main.jpg",
-      alt: "Main",
-      category: "Property",
-      property: "RussellHeights"
-    },
-    { 
-      id: 10,
-      src: "/images/Russell_heights_property/Outside of the building.jpg",
+      id: 19,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Outside_Of_The_Building.jpg`,
       alt: "Building Exterior",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 11,
-      src: "/images/Russell_heights_property/Pool side view 10.jpg",
+      id: 20,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Pool_Side_View.jpg`,
       alt: "Pool Area",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 12,
-      src: "/images/Russell_heights_property/Pool side view 4.jpg",
+      id: 21,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Pool_Side_View2.jpg`,
       alt: "Pool Area",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 13,
-      src: "/images/Russell_heights_property/Roof top view 2.jpg",
+      id: 22,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Roof_Top_View.jpg`,
       alt: "Roof Top",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 14,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Balcony.jpg",
+      id: 23,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Balcony.jpg`,
       alt: "Property Balcony",
       category: "Amenities",
       property: "RussellHeights"
     },
     { 
-      id: 15,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Bathroom.jpg",
+      id: 24,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bathroom.jpg`,
       alt: "Property Bathroom",
       category: "Bathroom",
       property: "RussellHeights"
     },
     { 
-      id: 16,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Bedroom.jpg",
+      id: 25,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bedroom.jpg`,
       alt: "Property Bedroom",
       category: "Bedroom",
       property: "RussellHeights"
     },
     { 
-      id: 17,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Bedroom2.jpg",
+      id: 26,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Bedroom2.jpg`,
       alt: "Property Bedroom",
       category: "Bedroom",
       property: "RussellHeights"
     },
     { 
-      id: 18,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Diningroom.jpg",
+      id: 27,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Diningroom.jpg`,
       alt: "Property Dining Room",
       category: "Dining Room",
       property: "RussellHeights"
     },
     { 
-      id: 19,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Kitchen.jpg",
+      id: 28,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Kitchen.jpg`,
       alt: "Property Kitchen",
       category: "Kitchen",
       property: "RussellHeights"
     },
     { 
-      id: 20,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Laundry.jpg",
+      id: 29,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Laundry.jpg`,
       alt: "Property Laundry",
       category: "Laundry",
       property: "RussellHeights"
     },
     { 
-      id: 21,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Livingroom.jpg",
+      id: 30,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Livingroom.jpg`,
       alt: "Property Living Room",
       category: "Living Room",
       property: "RussellHeights"
     },
     { 
-      id: 22,
-      src: "/images/Russell_heights_property/Russell_Heights_Property_Livingroom2.jpg",
+      id: 31,
+      src: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Russell_Heights_Property_Livingroom2.jpg`,
       alt: "Property Living Room",
       category: "Living Room",
       property: "RussellHeights"
-    },
+    }
   ];
 
   // Get unique categories
