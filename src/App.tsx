@@ -58,6 +58,42 @@ function App() {
       price: 299,
       location: "Negril, Jamaica",
       airbnbLink: "https://airbnb.com/property1",
+      amenities: {
+        bedroom: ["Bed linens", "Iron"],
+        entertainment: ["TV"],
+        fitness: ["Exercise equipment"],
+        climate: ["Air conditioning", "Ceiling fan", "Heating"],
+        safety: ["Smoke alarm", "Fire extinguisher"],
+        connectivity: ["Wifi"],
+        kitchen: [
+          "Fully equipped kitchen", 
+          "Food preparation space", 
+          "Refrigerator", 
+          "Freezer", 
+          "Microwave", 
+          "Stove", 
+          "Hot water kettle", 
+          "Coffee maker", 
+          "Cooking basics (pots, pans, oil, salt, pepper)",
+          "Dishes and silverware"
+        ],
+        outdoor: ["Patio or balcony", "Sun loungers"],
+        parking: ["Free parking on premises"],
+        facilities: ["Pool", "Elevator", "Gym"],
+        services: [
+          "Luggage drop-off allowed", 
+          "Long-term stays allowed (28+ days)", 
+          "Self check-in with keypad", 
+          "Cleaning available during stay"
+        ],
+        notIncluded: [
+          "Exterior security cameras", 
+          "Washer", 
+          "Dryer", 
+          "Essentials (towels, soap, toilet paper)", 
+          "Carbon monoxide alarm"
+        ]
+      },
       gallery: [
         `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bathroom.jpg`,
         `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bedroom.jpg`,

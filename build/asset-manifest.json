@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "https://elzakari.github.io/LandingPage/static/css/main.9fb581cb.css",
-    "main.js": "https://elzakari.github.io/LandingPage/static/js/main.bd6d4d22.js",
+    "main.js": "https://elzakari.github.io/LandingPage/static/js/main.c88c97c5.js",
     "index.html": "https://elzakari.github.io/LandingPage/index.html",
     "main.9fb581cb.css.map": "https://elzakari.github.io/LandingPage/static/css/main.9fb581cb.css.map",
-    "main.bd6d4d22.js.map": "https://elzakari.github.io/LandingPage/static/js/main.bd6d4d22.js.map"
+    "main.c88c97c5.js.map": "https://elzakari.github.io/LandingPage/static/js/main.c88c97c5.js.map"
   },
   "entrypoints": [
     "static/css/main.9fb581cb.css",
-    "static/js/main.bd6d4d22.js"
+    "static/js/main.c88c97c5.js"
   ]
 }
