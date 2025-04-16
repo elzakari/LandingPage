@@ -57,43 +57,7 @@ function App() {
       rating: 4.9,
       price: 299,
       location: "Negril, Jamaica",
-      airbnbLink: "https://airbnb.com/property1",
-      amenities: {
-        bedroom: ["Bed linens", "Iron"],
-        entertainment: ["TV"],
-        fitness: ["Exercise equipment"],
-        climate: ["Air conditioning", "Ceiling fan", "Heating"],
-        safety: ["Smoke alarm", "Fire extinguisher"],
-        connectivity: ["Wifi"],
-        kitchen: [
-          "Fully equipped kitchen", 
-          "Food preparation space", 
-          "Refrigerator", 
-          "Freezer", 
-          "Microwave", 
-          "Stove", 
-          "Hot water kettle", 
-          "Coffee maker", 
-          "Cooking basics (pots, pans, oil, salt, pepper)",
-          "Dishes and silverware"
-        ],
-        outdoor: ["Patio or balcony", "Sun loungers"],
-        parking: ["Free parking on premises"],
-        facilities: ["Pool", "Elevator", "Gym"],
-        services: [
-          "Luggage drop-off allowed", 
-          "Long-term stays allowed (28+ days)", 
-          "Self check-in with keypad", 
-          "Cleaning available during stay"
-        ],
-        notIncluded: [
-          "Exterior security cameras", 
-          "Washer", 
-          "Dryer", 
-          "Essentials (towels, soap, toilet paper)", 
-          "Carbon monoxide alarm"
-        ]
-      },
+      airbnbLink: "https://www.airbnb.com/users/show/593152773",
       gallery: [
         `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bathroom.jpg`,
         `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bedroom.jpg`,
@@ -140,7 +104,7 @@ function App() {
       rating: 4.8,
       price: 299,
       location: "Kingstown, Jamaica",
-      airbnbLink: "https://airbnb.com/property2",
+      airbnbLink: "https://www.airbnb.com/users/show/574202830",
       gallery: [
         `${process.env.PUBLIC_URL}/images/Russell_heights_property/Balcony_View.jpg`,
         `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bathroom_View.jpg`,
@@ -291,7 +255,11 @@ function App() {
         {/* Hero Section with parallax effect */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
+            // Make sure all image paths use process.env.PUBLIC_URL consistently
+            // For example, in the hero section:
             <div className="parallax-bg" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/images/hero-bg.jpg')`}}></div>
+            
+            // ... and for all other assets
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
