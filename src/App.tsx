@@ -178,13 +178,13 @@ function App() {
               <a href="#contact" className={`transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'}`}>Contact</a>
             </div>
             
-            <button className={`hidden md:block px-4 py-2 rounded-lg transition-colors ${
+            <a href="#contact" className={`hidden md:block px-4 py-2 rounded-lg transition-colors ${
               isScrolled 
                 ? 'bg-blue-700 text-white hover:bg-blue-800' 
                 : 'bg-white text-blue-700 hover:bg-blue-50'
             }`}>
               Book Now
-            </button>
+            </a>
             
             {/* Mobile Menu Button */}
             <button 
@@ -244,22 +244,22 @@ function App() {
                 >
                   Contact
                 </a>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                <a 
+                  href="#contact" 
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Book Now
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </nav>
 
         {/* Hero Section with parallax effect */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
           <div className="absolute inset-0 z-0">
-            // Make sure all image paths use process.env.PUBLIC_URL consistently
-            // For example, in the hero section:
             <div className="parallax-bg" style={{backgroundImage: `url('${process.env.PUBLIC_URL}/images/hero-bg.jpg')`}}></div>
-            
-            // ... and for all other assets
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
           <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
@@ -271,44 +271,41 @@ function App() {
             </p>
             
             {/* Advanced Search Bar */}
-            <div className="bg-white bg-opacity-95 rounded-xl p-4 shadow-2xl mb-10 animate-fade-in animation-delay-300 transform hover:scale-[1.01] transition-all duration-300">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-white bg-opacity-80 backdrop-blur-sm rounded-xl p-3 shadow-lg mb-8 animate-fade-in animation-delay-300 transform hover:scale-[1.01] transition-all duration-300">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
                 <div className="relative">
-                  <label className="block text-gray-700 text-sm font-medium mb-1 text-left">Location</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <MapPin size={18} className="text-blue-600" />
+                      <MapPin size={16} className="text-blue-600" />
                     </div>
-                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700">
+                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent">
                       <option value="">All Locations</option>
-                      <option value="miami">Miami, FL</option>
-                      <option value="orlando">Orlando, FL</option>
-                      <option value="tampa">Tampa, FL</option>
+                      <option value="negril">Negril, Jamaica</option>
+                      <option value="kingston">Kingston, Jamaica</option>
                     </select>
                   </div>
                 </div>
                 
                 <div className="relative">
-                  <label className="block text-gray-700 text-sm font-medium mb-1 text-left">Check-in Date</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Calendar size={18} className="text-blue-600" />
+                      <Calendar size={16} className="text-blue-600" />
                     </div>
                     <input 
                       type="date" 
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-gray-700"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-gray-700 text-sm bg-transparent"
+                      placeholder="Check-in"
                     />
                   </div>
                 </div>
                 
                 <div className="relative">
-                  <label className="block text-gray-700 text-sm font-medium mb-1 text-left">Group Size</label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Users size={18} className="text-blue-600" />
+                      <Users size={16} className="text-blue-600" />
                     </div>
-                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700">
-                      <option value="">Select size</option>
+                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent">
+                      <option value="">Group Size</option>
                       <option value="10-20">10-20 people</option>
                       <option value="21-40">21-40 people</option>
                       <option value="41-60">41-60 people</option>
@@ -317,10 +314,10 @@ function App() {
                   </div>
                 </div>
                 
-                <div className="relative flex items-end">
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center font-medium">
-                    Search Properties
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div className="relative flex items-center">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm">
+                    Search
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </button>
@@ -529,3 +526,80 @@ function App() {
 }
 
 export default App;
+
+{/* Search Section */}
+<section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-10">Find Your Perfect Stay</h2>
+    
+    <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="p-6 md:p-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="space-y-2">
+            <label htmlFor="location" className="block text-sm font-medium text-gray-700">Location</label>
+            <select 
+              id="location" 
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+            >
+              <option value="">All Properties</option>
+              <option value="white-sands">White Sands Property</option>
+              <option value="russell-heights">Russell Heights Property</option>
+            </select>
+          </div>
+          
+          <div className="space-y-2">
+            <label htmlFor="guests" className="block text-sm font-medium text-gray-700">Guests</label>
+            <select 
+              id="guests" 
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+            >
+              <option value="1-2">1-2 Guests</option>
+              <option value="3-4">3-4 Guests</option>
+              <option value="5-8">5-8 Guests</option>
+              <option value="9+">9+ Guests</option>
+            </select>
+          </div>
+          
+          <div className="space-y-2">
+            <label htmlFor="unit-type" className="block text-sm font-medium text-gray-700">Unit Type</label>
+            <select 
+              id="unit-type" 
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+            >
+              <option value="">All Units</option>
+              <option value="single">Single Unit</option>
+              <option value="double">Double Unit</option>
+            </select>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="space-y-2">
+            <label htmlFor="check-in" className="block text-sm font-medium text-gray-700">Check In</label>
+            <input 
+              type="date" 
+              id="check-in" 
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <label htmlFor="check-out" className="block text-sm font-medium text-gray-700">Check Out</label>
+            <input 
+              type="date" 
+              id="check-out" 
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+            />
+          </div>
+        </div>
+        
+        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+          </svg>
+          Search Availability
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

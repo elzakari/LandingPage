@@ -8,7 +8,7 @@ const WhatsAppButton: React.FC = () => {
     setIsOpen(!isOpen);
   };
   
-  const phoneNumber = '+15551234567'; // Replace with your actual WhatsApp number
+  const phoneNumber = '+18763099016'; // Replace with your actual WhatsApp number
   const message = 'Hello! I\'m interested in booking a property for my group.';
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
