@@ -1,50 +1,95 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
-interface AnimatedBackgroundProps {
-  color?: string;
-  pathCount?: number;
-  opacity?: number;
-}
-
-const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ 
-  color = '#3b82f6', 
-  pathCount = 24,
-  opacity = 0.05
-}) => {
-  const paths = Array.from({ length: pathCount }, (_, i) => ({
-    id: i,
-    d: `M${-200 + i * 20} ${100 + i * 15} C ${-100 + i * 25} ${150 + i * 20}, ${100 + i * 30} ${200 - i * 10}, ${300 + i * 40} ${250 - i * 15}`,
-    delay: i * 0.1,
-    duration: 20 + i * 0.5,
-  }));
-
+const AnimatedBackground: React.FC = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">
-        {paths.map((path) => (
-          <motion.path
-            key={path.id}
-            d={path.d}
-            stroke={color}
-            strokeWidth={1 + path.id * 0.08}
-            strokeOpacity={opacity - path.id * 0.001}
-            fill="transparent"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ 
-              pathLength: [0, 1, 0],
-              opacity: [0, 1, 0],
-              pathOffset: [0, 1, 0]
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-white/80 mix-blend-overlay" />
+      
+      {/* Animated elements */}
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-100 to-blue-200 opacity-20 blur-3xl"
+        animate={{
+          x: ['-10%', '5%', '-5%'],
+          y: ['5%', '15%', '10%'],
+          scale: [1, 1.05, 0.95, 1],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: "easeInOut",
+        }}
+        style={{ top: '-15%', left: '60%' }}
+      />
+      
+      <motion.div
+        className="absolute w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-indigo-100 to-blue-100 opacity-20 blur-3xl"
+        animate={{
+          x: ['5%', '-8%', '3%'],
+          y: ['3%', '-5%', '8%'],
+          scale: [1, 0.9, 1.1, 1],
+        }}
+        transition={{
+          duration: 23,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: "easeInOut",
+        }}
+        style={{ top: '40%', left: '10%' }}
+      />
+      
+      <motion.div
+        className="absolute w-[450px] h-[450px] rounded-full bg-gradient-to-br from-blue-200 to-indigo-100 opacity-15 blur-3xl"
+        animate={{
+          x: ['-3%', '5%', '-5%'],
+          y: ['5%', '-3%', '5%'],
+          scale: [1, 1.1, 0.95, 1],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: "easeInOut",
+        }}
+        style={{ bottom: '5%', right: '15%' }}
+      />
+      
+      {/* Subtle floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-4 h-4 rounded-full bg-blue-400 opacity-10"
+            initial={{
+              x: `${Math.random() * 100}%`,
+              y: `${Math.random() * 100}%`,
+              scale: Math.random() * 0.5 + 0.5,
+            }}
+            animate={{
+              y: [`${Math.random() * 20 + 40}%`, `${Math.random() * 20 + 60}%`],
+              x: [`${Math.random() * 20 + 40}%`, `${Math.random() * 20 + 60}%`],
+              opacity: [0.1, 0.2, 0.1],
             }}
             transition={{
-              duration: path.duration,
-              delay: path.delay,
+              duration: Math.random() * 10 + 15,
               repeat: Infinity,
-              ease: "easeInOut"
+              repeatType: 'reverse',
+              ease: "easeInOut",
             }}
           />
         ))}
-      </svg>
+      </div>
+      
+      {/* Light mesh grid */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: 'linear-gradient(to right, #a5b4fc 1px, transparent 1px), linear-gradient(to bottom, #a5b4fc 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}
+      />
     </div>
   );
 };
