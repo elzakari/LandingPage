@@ -6,7 +6,7 @@ const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
-  const [propertyFilter, setPropertyFilter] = useState<'All' | 'WhiteSands' | 'RussellHeights'>('All');
+  const [propertyFilter, setPropertyFilter] = useState<'All' | 'WhiteSands' | 'RussellHeights' | 'AdinaVilla'>('All');
   const [categoryFilter, setCategoryFilter] = useState('All');
   
   const galleryImages = [
@@ -228,6 +228,71 @@ const Gallery: React.FC = () => {
       alt: "Property Living Room",
       category: "Living Room",
       property: "RussellHeights"
+    },
+
+    // Adina Villa Property
+    { 
+      id: 32,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/main.jpg`,
+      alt: "Main View",
+      category: "Property",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 33,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/bedroom.jpg`,
+      alt: "Bedroom",
+      category: "Bedroom",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 34,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/bathroom.jpg`,
+      alt: "Bathroom",
+      category: "Bathroom",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 35,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/kitchen.jpg`,
+      alt: "Kitchen",
+      category: "Kitchen",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 36,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/pool.jpg`,
+      alt: "Pool",
+      category: "Amenities",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 37,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/gym.jpg`,
+      alt: "Gym",
+      category: "Property",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 38,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/livingroom.jpg`,
+      alt: "Living Room",
+      category: "Living Room",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 39,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/dining_hall.jpg`,
+      alt: "Dining Area",
+      category: "Dining Room",
+      property: "AdinaVilla"
+    },
+    { 
+      id: 40,
+      src: `${process.env.PUBLIC_URL}/images/Adina_Villa/balcony.jpg`,
+      alt: "Balcony",
+      category: "Amenities",
+      property: "AdinaVilla"
     }
   ];
 
@@ -307,11 +372,12 @@ const Gallery: React.FC = () => {
             {[
               {id: 'All', label: 'All Properties'},
               {id: 'WhiteSands', label: 'White Sands'},
-              {id: 'RussellHeights', label: 'Russell Heights'}
+              {id: 'RussellHeights', label: 'Russell Heights'},
+              {id: 'AdinaVilla', label: 'Adina Villa'}
             ].map(property => (
               <motion.button
                 key={property.id}
-                onClick={() => setPropertyFilter(property.id as 'All' | 'WhiteSands' | 'RussellHeights')}
+                onClick={() => setPropertyFilter(property.id as 'All' | 'WhiteSands' | 'RussellHeights' | 'AdinaVilla')}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors flex items-center ${
                   propertyFilter === property.id 
                     ? 'bg-blue-600 text-white shadow-md' 
@@ -356,12 +422,18 @@ const Gallery: React.FC = () => {
           <div className="mb-10">
             <h3 className="text-2xl font-bold text-gray-800 mb-2 flex items-center justify-center">
               <Home size={20} className="mr-2 text-blue-600" />
-              {propertyFilter === 'WhiteSands' ? 'White Sands Property' : 'Russell Heights Property'}
+              {propertyFilter === 'WhiteSands' 
+                ? 'White Sands Property' 
+                : propertyFilter === 'RussellHeights' 
+                  ? 'Russell Heights Property'
+                  : 'Adina Villa Property'}
             </h3>
             <p className="text-center text-gray-600 max-w-2xl mx-auto">
               {propertyFilter === 'WhiteSands' 
                 ? 'Our White Sands Property offers stunning views and premium amenities for up to 44 guests.'
-                : 'Russell Heights Property features luxury accommodations and exclusive amenities for up to 100 guests.'}
+                : propertyFilter === 'RussellHeights'
+                  ? 'Russell Heights Property features luxury accommodations and exclusive amenities for up to 100 guests.'
+                  : 'Adina Villa offers a luxurious private villa experience with ocean views, infinity pool, and full staff including a chef.'}
             </p>
           </div>
         )}
@@ -393,11 +465,19 @@ const Gallery: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                 <div className="flex flex-wrap gap-1 mb-2">
                   <span className={`inline-block px-3 py-1 text-white text-xs rounded-full w-fit ${
-                    image.property === 'WhiteSands' ? 'bg-blue-600' : 'bg-blue-700'
+                    image.property === 'WhiteSands' 
+                      ? 'bg-blue-600' 
+                      : image.property === 'RussellHeights'
+                        ? 'bg-blue-700'
+                        : 'bg-blue-800'
                   }`}>
-                    {image.property === 'WhiteSands' ? 'White Sands' : 'Russell Heights'}
+                    {image.property === 'WhiteSands' 
+                      ? 'White Sands' 
+                      : image.property === 'RussellHeights'
+                        ? 'Russell Heights'
+                        : 'Adina Villa'}
                   </span>
-                  <span className="inline-block px-3 py-1 bg-gray-700 text-white text-xs rounded-full w-fit">
+                  <span className="inline-block px-3 py-1 bg-gray-700 text-white text-xs rounded-full">
                     {image.category}
                   </span>
                 </div>
@@ -508,9 +588,17 @@ const Gallery: React.FC = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                 <div className="flex gap-2 mb-1">
                   <span className={`inline-block px-3 py-1 text-white text-xs rounded-full ${
-                    filteredImages[selectedIndex]?.property === 'WhiteSands' ? 'bg-blue-600' : 'bg-blue-700'
+                    filteredImages[selectedIndex]?.property === 'WhiteSands' 
+                      ? 'bg-blue-600' 
+                      : filteredImages[selectedIndex]?.property === 'RussellHeights'
+                        ? 'bg-blue-700'
+                        : 'bg-blue-800'
                   }`}>
-                    {filteredImages[selectedIndex]?.property === 'WhiteSands' ? 'White Sands' : 'Russell Heights'}
+                    {filteredImages[selectedIndex]?.property === 'WhiteSands' 
+                      ? 'White Sands' 
+                      : filteredImages[selectedIndex]?.property === 'RussellHeights'
+                        ? 'Russell Heights'
+                        : 'Adina Villa'}
                   </span>
                   <span className="inline-block px-3 py-1 bg-gray-700 text-white text-xs rounded-full">
                     {filteredImages[selectedIndex]?.category}

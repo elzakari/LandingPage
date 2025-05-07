@@ -24,6 +24,9 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  // Add these state variables for the toast notification
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   // Handle loading screen
   const handleLoadComplete = () => {
@@ -52,11 +55,11 @@ function App() {
       units: 11,
       capacity: "Up to 44 guests",
       image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Main.jpg`,
-      features: ["Rooftop Pool", "Ocean Views", "Entertainment Area", "Full Kitchen"],
-      description: "Luxurious beachfront units with stunning ocean views, perfect for large group retreats and corporate events.",
+      features: ["Rooftop Pool", "Ocean Views", "Entertainment Area", "Full Kitchen", "24-Hour Security", "Gym Equipment"],
+      description: "Experience city comfort at White Sands, Kingston's premier serviced suites. Our 500 sq ft standard king suites are perfect for families or small groups, featuring king beds, kitchenettes, and spacious en-suite bathrooms with walk-in rain showers. Enjoy 24-hour security, rooftop pool, workout equipment, and convenient access to shopping and entertainment.",
       rating: 4.9,
       price: 299,
-      location: "Negril, Jamaica",
+      location: "Kingston, Jamaica",
       airbnbLink: "https://www.airbnb.com/users/show/593152773",
       gallery: [
         `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Bathroom.jpg`,
@@ -78,7 +81,7 @@ function App() {
           bedrooms: 2,
           bathrooms: 2,
           price: 299,
-          features: ["Ocean View", "Full Kitchen", "Living Area", "Private Balcony"],
+          features: ["Ocean View", "Full Kitchen", "Living Area", "Private Balcony", "Air Conditioning", "High-Speed WiFi"],
           image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Double_Unit_Livingroom.jpg`
         },
         {
@@ -87,7 +90,7 @@ function App() {
           bedrooms: 1,
           bathrooms: 1,
           price: 199,
-          features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View"],
+          features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View", "Flat-screen TV", "Rain Shower"],
           image: `${process.env.PUBLIC_URL}/images/White_Sands_property/Single_Unit_Livingroom.jpg`
         }
       ]
@@ -98,12 +101,11 @@ function App() {
       units: 25,
       capacity: "Up to 100 guests",
       image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Outside_Of_The_Building.jpg`,
-      // Make sure this matches the exact case of the file in your system
-      features: ["Infinity Pool", "Panoramic Views", "Event Space", "Private Balconies"],
-      description: "Spacious hillside retreat with panoramic city views, featuring modern amenities and versatile event spaces.",
+      features: ["Infinity Pool", "Panoramic Views", "Event Space", "Private Balconies", "24/7 Security", "Fully Equipped Kitchen"],
+      description: "Welcome to our brand-new gated home featuring 24/7 security, located just 4 minutes from Hi-Lo Supermarket and Fontana Pharmacy in Barbican. Enjoy spacious, modern living areas with rooftop pool and stunning 360-degree views. Amenities include A/C, Wi-Fi, fully equipped kitchen, dedicated workspace, parking, and backup utilities.",
       rating: 4.8,
       price: 299,
-      location: "Kingstown, Jamaica",
+      location: "Cherry Gardens, Kingston, Jamaica",
       airbnbLink: "https://www.airbnb.com/users/show/574202830",
       gallery: [
         `${process.env.PUBLIC_URL}/images/Russell_heights_property/Balcony_View.jpg`,
@@ -132,9 +134,9 @@ function App() {
           name: "Double Unit",
           capacity: "4-8 guests",
           bedrooms: 2,
-          bathrooms: 2,
+          bathrooms: 2.5,
           price: 299,
-          features: ["City View", "Full Kitchen", "Living Area", "Private Balcony"],
+          features: ["City View", "Full Kitchen", "Living Area", "Private Balcony", "Smart TV", "Washer/Dryer"],
           image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Living_Room_View.png`
         },
         {
@@ -143,8 +145,43 @@ function App() {
           bedrooms: 1,
           bathrooms: 1,
           price: 199,
-          features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View"],
+          features: ["Kitchenette", "Cozy Living Space", "Work Area", "City View", "Air Conditioning", "High-Speed WiFi"],
           image: `${process.env.PUBLIC_URL}/images/Russell_heights_property/Bedroom-2 view 2.jpg`
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Adina Villa",
+      units: 1,
+      capacity: "Up to 16+ guests",
+      image: `${process.env.PUBLIC_URL}/images/Adina_Villa/main.jpg`,
+      features: ["Infinity Pool", "Ocean Views", "Full Staff", "Chef Service", "BBQ Area"],
+      description: "Adina, with views of the Oracabessa Bay, is located in Boscobel, St. Mary, just a minute's drive from Ian Fleming International Airport, featuring modern design and elegant décor.",
+      rating: 4.9,
+      price: 399,
+      location: "Boscobel, St. Mary, Jamaica",
+      airbnbLink: "https://www.airbnb.com/l/DAvWckre",
+      gallery: [
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/main.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/bedroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/bathroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/kitchen.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/pool.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/gym.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/livingroom.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/dining_hall.jpg`,
+        `${process.env.PUBLIC_URL}/images/Adina_Villa/balcony.jpg`
+      ],
+      unitTypes: [
+        {
+          name: "Entire Villa",
+          capacity: "16+ guests",
+          bedrooms: 8,
+          bathrooms: 7,
+          price: 399,
+          features: ["Ocean View", "Full Kitchen", "Infinity Pool", "Private Chef", "Gym"],
+          image: `${process.env.PUBLIC_URL}/images/Adina Villa/main.jpg`
         }
       ]
     }
@@ -278,7 +315,10 @@ function App() {
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <MapPin size={16} className="text-blue-600" />
                     </div>
-                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent">
+                    <select 
+                      id="search-location"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent"
+                    >
                       <option value="">All Locations</option>
                       <option value="negril">Negril, Jamaica</option>
                       <option value="kingston">Kingston, Jamaica</option>
@@ -292,6 +332,7 @@ function App() {
                       <Calendar size={16} className="text-blue-600" />
                     </div>
                     <input 
+                      id="search-date"
                       type="date" 
                       className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-gray-700 text-sm bg-transparent"
                       placeholder="Check-in"
@@ -304,7 +345,10 @@ function App() {
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <Users size={16} className="text-blue-600" />
                     </div>
-                    <select className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent">
+                    <select 
+                      id="search-group-size"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all appearance-none text-gray-700 text-sm bg-transparent"
+                    >
                       <option value="">Group Size</option>
                       <option value="10-20">10-20 people</option>
                       <option value="21-40">21-40 people</option>
@@ -315,7 +359,24 @@ function App() {
                 </div>
                 
                 <div className="relative flex items-center">
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm">
+                  <button 
+                    onClick={() => {
+                      const location = (document.getElementById('search-location') as HTMLSelectElement)?.value;
+                      const date = (document.getElementById('search-date') as HTMLInputElement)?.value;
+                      const groupSize = (document.getElementById('search-group-size') as HTMLSelectElement)?.value;
+                      
+                      // Scroll to properties section
+                      document.getElementById('properties')?.scrollIntoView({ behavior: 'smooth' });
+                      
+                      // Set toast message and show it
+                      setToastMessage(`Showing properties in ${location || 'all locations'} for ${groupSize || 'any group size'} ${date ? `on ${date}` : ''}`);
+                      setShowToast(true);
+                      
+                      // Hide toast after 5 seconds
+                      setTimeout(() => setShowToast(false), 5000);
+                    }}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center justify-center font-medium text-sm"
+                  >
                     Search
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -499,7 +560,7 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <Phone size={18} className="text-gray-400 mr-2 flex-shrink-0" />
-                    <span className="text-gray-400">+1 876-309-9016</span>
+                    <span className="text-gray-400">+1 876-309-9020</span>
                   </li>
                   <li className="flex items-center">
                     <Mail size={18} className="text-gray-400 mr-2 flex-shrink-0" />
@@ -521,6 +582,26 @@ function App() {
       
       <WhatsAppButton />
       <CookieConsent />
+      
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in flex items-center">
+          <div className="mr-3">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span>{toastMessage}</span>
+          <button 
+            onClick={() => setShowToast(false)}
+            className="ml-4 text-white hover:text-blue-200 transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      )}
     </>
   );
 }
@@ -601,5 +682,12 @@ export default App;
         </button>
       </div>
     </div>
+    <div className="flex items-center mb-4">
+                    <Phone size={20} className="text-blue-600 mr-3" />
+                    <div>
+                      <h3 className="font-semibold">Phone</h3>
+                      <a href="tel:+18763099020" className="text-gray-600 hover:text-blue-600 transition-colors">+1 (876) 309-9020</a>
+                    </div>
+                  </div>
   </div>
 </section>

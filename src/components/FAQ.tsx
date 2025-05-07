@@ -286,7 +286,7 @@ const FAQ: React.FC = () => {
               </svg>
             </div>
             <p className="text-gray-700">
-              For urgent inquiries, please call us at <span className="font-medium text-blue-700">+1 (555) 123-4567</span>
+              For urgent inquiries, please call us at <span className="font-medium text-blue-700">+1 876-309-9020</span>
             </p>
           </div>
         </div>

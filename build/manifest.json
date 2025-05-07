@@ -1,11 +1,21 @@
 {
-  "short_name": "Reign Hosting",
+  "short_name": "Reign",
   "name": "Reign Hosting Services",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "images/Reign Hosting Services Logos/Contentless_Logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/Reign Hosting Services Logos/Contentless_Logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
